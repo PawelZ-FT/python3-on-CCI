@@ -40,6 +40,8 @@ jobs:
             #sudo -H pip install --upgrade awscli
             #sudo -H pip install jinja2
 
+            ls -al
+
             test.py
 
             parser.py
