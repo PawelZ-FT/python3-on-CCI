@@ -16,6 +16,13 @@ jobs:
             ## Build container
             # Switching to Python 3
             #pyenv global 3.5.2
+            
+            echo $PYENV_ROOT
+
+            echo ==========
+            pyenv init -
+            echo ============
+
             rm -rf "$HOME/.pyenv"
             unset PYENV_ROOT
             
@@ -28,7 +35,7 @@ jobs:
             echo ---------------
             echo
 
-            dpkg -L python3
+            ls -al /usr/bin/python*
 
             # Update pip & awscli, install pyaml
             #sudo apt-get update
