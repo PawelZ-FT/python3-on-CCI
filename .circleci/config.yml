@@ -19,10 +19,6 @@ jobs:
             
             echo $PYENV_ROOT
 
-            echo ==========
-            pyenv init -
-            echo ============
-
             rm -rf "$HOME/.pyenv"
             unset PYENV_ROOT
             
@@ -43,5 +39,7 @@ jobs:
             #sudo -H pip install --upgrade pip
             #sudo -H pip install --upgrade awscli
             #sudo -H pip install jinja2
+
+            test.py
 
             parser.py
