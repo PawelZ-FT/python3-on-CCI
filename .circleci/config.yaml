@@ -20,7 +20,7 @@ jobs:
             unset PYENV_ROOT
             
             python -V
-            python3 -V
+            #python3 -V
 
             cat ~/.bashrc
 
