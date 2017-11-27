@@ -22,13 +22,13 @@ jobs:
             python -V
             #python3 -V
 
-            cat ~/.bashrc
+            cat ~/.circlerc
 
             echo
             echo ---------------
             echo
 
-            dpkg -l python3
+            dpkg -L python3
 
             # Update pip & awscli, install pyaml
             #sudo apt-get update
