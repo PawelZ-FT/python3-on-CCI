@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    environment:
+      - AWS_ACCOUNT: "307921801440"
+      - ECR_ENDPOINT: "307921801440.dkr.ecr.eu-west-1.amazonaws.com"
+      - S3_BUCKET: "cms-tech-s3"
+      - METHODE_SERVLET: "ft-methode-restapi-app"
+      - BASE_BUILD: "latest"
+    steps:
+      - checkout
+      - run:
+          name: Container build
+          command: |
+            ## Build container
+            # Switching to Python 3
+            #pyenv global 3.5.2
+            rm -rf "$HOME/.pyenv"
+            unset PYENV_ROOT
+            
+            python -V
+            python3 -V
+
+            cat ~/.bashrc
+
+            echo
+            echo ---------------
+
+            dpkg -l python3
+
+            # Update pip & awscli, install pyaml
+            #sudo apt-get update
+            #sudo apt-get install python3-dev python3-yaml python3-jinja2 awscli
+            #sudo -H pip install --upgrade pip
+            #sudo -H pip install --upgrade awscli
+            #sudo -H pip install jinja2
+
+            parser.py
