@@ -20,14 +20,21 @@ jobs:
             unset PYENV_ROOT
             
             python -V
-            python3 -V
+            #python3 -V
+
+            cat ~/.bashrc
+
+            echo
+            echo ---------------
+            echo
+
+            dpkg -l python3
 
             # Update pip & awscli, install pyaml
-            sudo apt-get update
-            sudo apt-get install python3-dev python3-yaml python3-jinja2 awscli
+            #sudo apt-get update
+            #sudo apt-get install python3-dev python3-yaml python3-jinja2 awscli
             #sudo -H pip install --upgrade pip
             #sudo -H pip install --upgrade awscli
             #sudo -H pip install jinja2
 
             parser.py
-            
